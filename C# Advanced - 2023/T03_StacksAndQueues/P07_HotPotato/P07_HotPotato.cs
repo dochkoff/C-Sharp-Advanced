@@ -15,7 +15,7 @@ namespace P07_HotPotato
 
             while (namesQueue.Count() > 1)
             {
-                for (int i = 0; i < counting; i++)
+                for (int i = 0; i < counting - 1; i++)
                 {
                     string passed = namesQueue.Dequeue();
                     namesQueue.Enqueue(passed);
