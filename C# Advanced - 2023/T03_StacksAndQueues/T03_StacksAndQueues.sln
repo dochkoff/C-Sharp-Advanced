@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04_MatchingBrackets", "P04
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_PrintEvenNumbers", "P05_PrintEvenNumbers\P05_PrintEvenNumbers.csproj", "{889FABDE-F7C2-4730-91D2-78A6BAD38253}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_Supermarket", "P06_Supermarket\P06_Supermarket.csproj", "{0951BD7A-D10D-4B8E-841C-211F26BDC42E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{889FABDE-F7C2-4730-91D2-78A6BAD38253}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{889FABDE-F7C2-4730-91D2-78A6BAD38253}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{889FABDE-F7C2-4730-91D2-78A6BAD38253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0951BD7A-D10D-4B8E-841C-211F26BDC42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0951BD7A-D10D-4B8E-841C-211F26BDC42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0951BD7A-D10D-4B8E-841C-211F26BDC42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0951BD7A-D10D-4B8E-841C-211F26BDC42E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
