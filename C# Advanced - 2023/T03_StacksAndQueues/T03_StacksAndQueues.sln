@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_PrintEvenNumbers", "P05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_Supermarket", "P06_Supermarket\P06_Supermarket.csproj", "{0951BD7A-D10D-4B8E-841C-211F26BDC42E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_HotPotato", "P07_HotPotato\P07_HotPotato.csproj", "{98DC0878-F313-47DC-B963-2FB0EA7377E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0951BD7A-D10D-4B8E-841C-211F26BDC42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0951BD7A-D10D-4B8E-841C-211F26BDC42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0951BD7A-D10D-4B8E-841C-211F26BDC42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98DC0878-F313-47DC-B963-2FB0EA7377E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98DC0878-F313-47DC-B963-2FB0EA7377E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98DC0878-F313-47DC-B963-2FB0EA7377E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98DC0878-F313-47DC-B963-2FB0EA7377E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

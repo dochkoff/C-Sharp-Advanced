@@ -19,7 +19,8 @@ namespace P06_Supermarket
                 }
                 else if (input == "Paid")
                 {
-                    for (int i = 0; i < names.Count(); i++)
+                    int count = names.Count();
+                    for (int i = 0; i < count; i++)
                     {
                         Console.WriteLine(names.Dequeue());
                     }
