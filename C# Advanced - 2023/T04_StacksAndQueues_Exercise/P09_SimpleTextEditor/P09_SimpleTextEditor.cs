@@ -38,7 +38,6 @@ namespace P09_SimpleTextEditor
                 else if (commandIndex == 4)
                 {
                     text = undoChanges.Pop();
-                    Console.WriteLine(text);
                 }
             }
         }
