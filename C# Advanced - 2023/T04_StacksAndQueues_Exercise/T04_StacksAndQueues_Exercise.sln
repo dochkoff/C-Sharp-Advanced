@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1704.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_BasicStackOperations", "P01_BasicStackOperations\P01_BasicStackOperations.csproj", "{F961841B-D4C4-4F3C-A273-FA8BE7A96159}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_BasicQueueOperations", "P02_BasicQueueOperations\P02_BasicQueueOperations.csproj", "{260F1EF9-9AF0-4F42-BB80-0CBBAF7882C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F961841B-D4C4-4F3C-A273-FA8BE7A96159}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F961841B-D4C4-4F3C-A273-FA8BE7A96159}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F961841B-D4C4-4F3C-A273-FA8BE7A96159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{260F1EF9-9AF0-4F42-BB80-0CBBAF7882C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{260F1EF9-9AF0-4F42-BB80-0CBBAF7882C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{260F1EF9-9AF0-4F42-BB80-0CBBAF7882C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{260F1EF9-9AF0-4F42-BB80-0CBBAF7882C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
