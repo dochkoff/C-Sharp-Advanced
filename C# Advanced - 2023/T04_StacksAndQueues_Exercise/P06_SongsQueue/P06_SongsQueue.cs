@@ -26,7 +26,7 @@ namespace P06_SongsQueue
                 }
                 else if (command[0] == "Add")
                 {
-                    string NewSongName = string.Join(" ", command).Substring(4);
+                    string NewSongName = string.Join(" ", command.Skip(1));
 
                     if (songsQueue.Contains(NewSongName))
                     {
