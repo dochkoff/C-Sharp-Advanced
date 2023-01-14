@@ -8,23 +8,55 @@ namespace P07_TruckTour
     {
         static void Main(string[] args)
         {
-            int numberOfPetrolPumps = int.Parse(Console.ReadLine());
+            const int litersPerKilometer = 1;
 
+            int count = int.Parse(Console.ReadLine());
 
+            Queue<int[]> pumps = new Queue<int[]>();
 
-            for (int i = 0; i < numberOfPetrolPumps; i++)
+            for (int i = 0; i < count; i++)
             {
-                int[] petrolPumpParams = Console.ReadLine()
-                .Split()
-                .Select(int.Parse)
-                .ToArray();
+                int[] pumpTokens = Console.ReadLine()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .Select(int.Parse)
+                    .ToArray();
 
-                int litresPetrol = petrolPumpParams[0];
-                int nextPetrolPumpDistance = petrolPumpParams[1];
+                pumps.Enqueue(pumpTokens);
+            }
 
-                if (litresPetrol >= nextPetrolPumpDistance)
+            int startIndex = 0;
+
+            while (true)
+            {
+                bool isComplete = true;
+                int totalLiters = 0;
+
+                foreach (var pump in pumps)
                 {
-                    Console.WriteLine(i);
+                    int liters = pump[0];
+                    int distance = pump[1];
+
+                    totalLiters += liters;
+
+                    if (totalLiters - distance * litersPerKilometer < 0)
+                    {
+                        startIndex++;
+
+                        int[] currentPump = pumps.Dequeue();
+                        pumps.Enqueue(currentPump);
+
+                        isComplete = false;
+
+                        break;
+                    }
+
+                    totalLiters -= distance * litersPerKilometer;
+                }
+
+                if (isComplete)
+                {
+                    Console.WriteLine(startIndex);
+                    break;
                 }
             }
         }
