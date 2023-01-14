@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04_FastFood", "P04_FastFoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_FashionBoutique", "P05_FashionBoutique\P05_FashionBoutique.csproj", "{A487D680-32EB-4BF1-99FE-40AC6953E1B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_SongsQueue", "P06_SongsQueue\P06_SongsQueue.csproj", "{539F6A88-7727-4A6E-B992-442A8ADFAF88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A487D680-32EB-4BF1-99FE-40AC6953E1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A487D680-32EB-4BF1-99FE-40AC6953E1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A487D680-32EB-4BF1-99FE-40AC6953E1B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539F6A88-7727-4A6E-B992-442A8ADFAF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539F6A88-7727-4A6E-B992-442A8ADFAF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539F6A88-7727-4A6E-B992-442A8ADFAF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539F6A88-7727-4A6E-B992-442A8ADFAF88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
