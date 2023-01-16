@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Xml.Linq;
 
 namespace P04_SymbolInMatrix
 {
@@ -31,9 +30,16 @@ namespace P04_SymbolInMatrix
                     if (matrix[row, col] == neededSymbol)
                     {
                         Console.WriteLine($"({row}, {col})");
+                        return;
+                    }
+                    else
+                    {
+
                     }
                 }
             }
+
+            Console.WriteLine($"{neededSymbol} does not occur in the matrix");
         }
     }
 }
