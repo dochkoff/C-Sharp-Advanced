@@ -7,14 +7,12 @@ namespace P02_SquaresInMatrix
     {
         static void Main(string[] args)
         {
-            string dimensions = (Console.ReadLine());
-
-            int[] parameters = dimensions
+            int[] dimensions = Console.ReadLine()
                     .Split()
                     .Select(int.Parse)
                     .ToArray();
 
-            char[,] matrix = new char[parameters[0], parameters[1]];
+            char[,] matrix = new char[dimensions[0], dimensions[1]];
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
