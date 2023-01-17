@@ -61,14 +61,19 @@ namespace P04_MatrixShuffling
                 matrix[row1, col1] = matrix[row2, col2];
                 matrix[row2, col2] = tempValue;
 
-                for (int row = 0; row < matrix.GetLength(0); row++)
+                PrintMatrix(matrix);
+            }
+        }
+
+        private static void PrintMatrix(string[,] matrix)
+        {
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    for (int col = 0; col < matrix.GetLength(1); col++)
-                    {
-                        Console.Write(matrix[row, col] + " ");
-                    }
-                    Console.WriteLine();
+                    Console.Write(matrix[row, col] + " ");
                 }
+                Console.WriteLine();
             }
         }
     }
