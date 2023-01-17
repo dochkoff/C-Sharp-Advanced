@@ -37,4 +37,3 @@ namespace P01_DiagonalDifference
         }
     }
 }
-
