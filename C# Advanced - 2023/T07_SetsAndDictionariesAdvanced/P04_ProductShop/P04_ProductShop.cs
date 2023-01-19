@@ -15,7 +15,7 @@ namespace P04_ProductShop
 
             while (command != "Revision")
             {
-                string[] shopInfo = command.Split();
+                string[] shopInfo = command.Split(", ");
                 string shopName = shopInfo[0];
                 string product = shopInfo[1];
                 double price = double.Parse(shopInfo[2]);
