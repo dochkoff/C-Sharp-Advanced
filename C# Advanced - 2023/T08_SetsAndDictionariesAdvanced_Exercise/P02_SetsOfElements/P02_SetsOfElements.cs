@@ -32,12 +32,17 @@ namespace P02_SetsOfElements
                     secoundSet.Add(num);
                 }
             }
+            //compare two sets and modify the first one to contain only unique items from the two sets
+            //firstSet.UnionWith(secoundSet);
 
+            //compare two sets and modify first one to contain only items that not apear in the socound one
+            //firstSet.ExceptWith(secoundSet);
+
+            //compare two sets and modify the first one to contain only not repeated items
             firstSet.IntersectWith(secoundSet);
 
+
             Console.Write(string.Join(" ", firstSet));
-
-
         }
     }
 }
