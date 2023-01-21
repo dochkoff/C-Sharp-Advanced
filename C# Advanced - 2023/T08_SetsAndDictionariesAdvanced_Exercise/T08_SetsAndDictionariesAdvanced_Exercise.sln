@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_Wardrobe", "P06_Wardrob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_ForceBook", "P10_ForceBook\P10_ForceBook.csproj", "{A7ED31E9-3191-45B2-8E49-A7A4FA3D2124}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_TheV-Logger", "P07_TheV-Logger\P07_TheV-Logger.csproj", "{13E33BCB-7374-4983-8BB5-8D13623A76B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_Ranking", "P08_Ranking\P08_Ranking.csproj", "{15562787-23CD-437B-AE18-F185E20D1454}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{A7ED31E9-3191-45B2-8E49-A7A4FA3D2124}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7ED31E9-3191-45B2-8E49-A7A4FA3D2124}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7ED31E9-3191-45B2-8E49-A7A4FA3D2124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E33BCB-7374-4983-8BB5-8D13623A76B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E33BCB-7374-4983-8BB5-8D13623A76B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E33BCB-7374-4983-8BB5-8D13623A76B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E33BCB-7374-4983-8BB5-8D13623A76B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15562787-23CD-437B-AE18-F185E20D1454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15562787-23CD-437B-AE18-F185E20D1454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15562787-23CD-437B-AE18-F185E20D1454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15562787-23CD-437B-AE18-F185E20D1454}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
