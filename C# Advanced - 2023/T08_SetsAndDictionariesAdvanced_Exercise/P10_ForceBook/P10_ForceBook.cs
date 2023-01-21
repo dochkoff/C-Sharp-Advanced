@@ -8,7 +8,7 @@ namespace P10_ForceBook
     {
         static void Main(string[] args)
         {
-            SortedDictionary<string, SortedSet<string>> sideAndUser = new();
+            SortedDictionary<string, SortedSet<string>> sideAndUser = new SortedDictionary<string, SortedSet<string>>();
             string command;
             while ((command = Console.ReadLine()) != "Lumpawaroo")
             {
@@ -16,9 +16,34 @@ namespace P10_ForceBook
                 string forceUser;
                 if (command.Contains("|"))
                 {
-                    string[] cmdArgs = command.Split(" | ");
+                    string[] cmdArgs = command.Split(" | ", StringSplitOptions.RemoveEmptyEntries);
                     forceSide = cmdArgs[0];
                     forceUser = cmdArgs[1];
+
+                    if (!sideAndUser.Values.Any(u => u.Contains(forceUser)))
+                    {
+                        if (!sideAndUser.ContainsKey(forceSide))
+                        {
+                            sideAndUser.Add(forceSide, new SortedSet<string>());
+                        }
+
+                        sideAndUser[forceSide].Add(forceUser);
+                    }
+                }
+                else if (command.Contains("->"))
+                {
+                    string[] cmdArgs = command.Split(" -> ", StringSplitOptions.RemoveEmptyEntries);
+                    forceSide = cmdArgs[1];
+                    forceUser = cmdArgs[0];
+
+                    foreach (var keyValuePair in sideAndUser)
+                    {
+                        if (keyValuePair.Value.Contains(forceUser))
+                        {
+                            keyValuePair.Value.Remove(forceUser);
+                            break;
+                        }
+                    }
 
                     if (!sideAndUser.ContainsKey(forceSide))
                     {
@@ -26,37 +51,16 @@ namespace P10_ForceBook
                     }
 
                     sideAndUser[forceSide].Add(forceUser);
-                }
-                else if (command.Contains("->"))
-                {
-                    string[] cmdArgs = command.Split(" -> ");
-                    forceSide = cmdArgs[1];
-                    forceUser = cmdArgs[0];
-
-                    //if (!sideAndUser.ContainsKey(forceSide))
-                    //{
-                    //    sideAndUser.Add(forceSide, new SortedSet<string>());
-                    //}
-
-
-
-                    foreach (var keyValuePair in sideAndUser)
-                    {
-                        if (keyValuePair.Value.Contains(forceUser))
-                        {
-                            keyValuePair.Value.Remove(forceUser);
-                        }
-                    }
-
-                    sideAndUser[forceSide].Add(forceUser);
 
                     Console.WriteLine($"{forceUser} joins the {forceSide} side!");
                 }
-
-
             }
 
-            foreach (var kvp in sideAndUser)
+            Dictionary<string, SortedSet<string>> orderedSidesUsers = sideAndUser
+                .OrderByDescending(s => s.Value.Count)
+                .ToDictionary(s => s.Key, s => s.Value);
+
+            foreach (var kvp in orderedSidesUsers)
             {
                 if (kvp.Value.Count > 0)
                 {
