@@ -17,13 +17,14 @@
             {
                 using (StreamWriter writer = new StreamWriter(outputFilePath))
                 {
-                    string line = "";
+                    string line = reader.ReadLine();
                     int row = 0;
 
                     while (line != null)
                     {
-                        line = reader.ReadLine();
+
                         writer.WriteLine($"{++row}. {line}");
+                        line = reader.ReadLine();
                     }
                 }
             }
