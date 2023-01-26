@@ -1,7 +1,7 @@
-﻿Predicate<string> filterbyUppercase = s => s[0] == char.ToUpper(s[0]);
+﻿Predicate<string> filterbyUppercase = s => s[0] == char.ToUpper(s[0]) && char.IsLetter(s[0]);
 
 string[] words = Console.ReadLine()
-    .Split()
+    .Split(' ', StringSplitOptions.RemoveEmptyEntries)
     .Where(s => filterbyUppercase(s))
     .ToArray();
 
