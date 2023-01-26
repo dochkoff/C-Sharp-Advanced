@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04_FindEvensOrOdds", "P04_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_AppliedArithmetics", "P05_AppliedArithmetics\P05_AppliedArithmetics.csproj", "{13F7B15E-CF25-46EB-AEF9-A715F55D65BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11_TriFunction", "P11_TriFunction\P11_TriFunction.csproj", "{DE9C5E4B-9705-44B2-9D87-5B39584D474C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{13F7B15E-CF25-46EB-AEF9-A715F55D65BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13F7B15E-CF25-46EB-AEF9-A715F55D65BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13F7B15E-CF25-46EB-AEF9-A715F55D65BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9C5E4B-9705-44B2-9D87-5B39584D474C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9C5E4B-9705-44B2-9D87-5B39584D474C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9C5E4B-9705-44B2-9D87-5B39584D474C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9C5E4B-9705-44B2-9D87-5B39584D474C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
