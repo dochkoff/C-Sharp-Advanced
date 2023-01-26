@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_AppliedArithmetics", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11_TriFunction", "P11_TriFunction\P11_TriFunction.csproj", "{DE9C5E4B-9705-44B2-9D87-5B39584D474C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_ReverseAndExclude", "P06_ReverseAndExclude\P06_ReverseAndExclude.csproj", "{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{DE9C5E4B-9705-44B2-9D87-5B39584D474C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE9C5E4B-9705-44B2-9D87-5B39584D474C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE9C5E4B-9705-44B2-9D87-5B39584D474C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
