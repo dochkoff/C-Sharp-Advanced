@@ -57,9 +57,9 @@ namespace CarManufacturer
         //methods
         public void Drive(double distance)
         {
-            if (fuelQuantity - (distance * fuelConsumption) > 0)
+            if (fuelQuantity - ((distance / 100) * fuelConsumption) > 0)
             {
-                fuelQuantity -= distance * fuelConsumption;
+                fuelQuantity -= (distance / 100) * fuelConsumption;
             }
             else
             {
@@ -69,7 +69,7 @@ namespace CarManufacturer
 
         public string WhoAmI()
         {
-            string print = $"Make: {this.Make} \nModel: {this.Model} \nYear: {this.Year} \nFuel: {this.FuelQuantity:F2}";
+            string print = $"Make: {this.Make} \nModel: {this.Model} \nYear: {this.Year} \nHorsePowers: {this.engine.HorsePower} \nFuelQuantity: {this.FuelQuantity}";
 
             return print;
         }
