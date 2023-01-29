@@ -1,14 +1,9 @@
-﻿Func<List<int>, List<int>> reverce = numbers =>
-{
-    List<int> result = new();
+﻿List<int> numbers = Console.ReadLine()
+    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+    .Select(int.Parse)
+    .ToList();
 
-    for (int i = numbers.Count - 1; i >= 0; i--)
-    {
-        result.Add(numbers[i]);
-    }
-
-    return result;
-};
+int devider = int.Parse(Console.ReadLine());
 
 Func<List<int>, Predicate<int>, List<int>> excludeDevisible = (numbers, match) =>
 {
@@ -25,12 +20,20 @@ Func<List<int>, Predicate<int>, List<int>> excludeDevisible = (numbers, match) =
     return result;
 };
 
-List<int> numbers = Console.ReadLine()
-    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-    .Select(int.Parse)
-    .ToList();
+Func<List<int>, List<int>> reverce = numbers =>
+{
+    List<int> result = new();
 
-int devider = int.Parse(Console.ReadLine());
+    for (int i = numbers.Count - 1; i >= 0; i--)
+    {
+        result.Add(numbers[i]);
+    }
+
+    return result;
+};
+
+
+
 
 numbers = excludeDevisible(numbers, n => n % devider == 0);
 numbers = reverce(numbers);
