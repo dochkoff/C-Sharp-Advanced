@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11_TriFunction", "P11_TriF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_ReverseAndExclude", "P06_ReverseAndExclude\P06_ReverseAndExclude.csproj", "{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_PredicateForNames", "P07_PredicateForNames\P07_PredicateForNames.csproj", "{FFA64CDF-CE75-4577-94B8-AF5B51449796}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA0AB2E5-7CA6-4079-AE9A-70B628B8D87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA64CDF-CE75-4577-94B8-AF5B51449796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA64CDF-CE75-4577-94B8-AF5B51449796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA64CDF-CE75-4577-94B8-AF5B51449796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA64CDF-CE75-4577-94B8-AF5B51449796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
