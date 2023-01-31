@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniParking", "SoftUniParking.csproj", "{EAAD3DBB-F743-4A68-BAAB-F40EAEB1BB4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_DateModifier", "..\P05_DateModifier\P05_DateModifier.csproj", "{16332A0B-FEDA-40B0-B55C-977AF8B49708}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EAAD3DBB-F743-4A68-BAAB-F40EAEB1BB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAAD3DBB-F743-4A68-BAAB-F40EAEB1BB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAAD3DBB-F743-4A68-BAAB-F40EAEB1BB4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16332A0B-FEDA-40B0-B55C-977AF8B49708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16332A0B-FEDA-40B0-B55C-977AF8B49708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16332A0B-FEDA-40B0-B55C-977AF8B49708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16332A0B-FEDA-40B0-B55C-977AF8B49708}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
