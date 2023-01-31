@@ -6,7 +6,6 @@
         {
             Person peter = new();
 
-            peter.Name = "Peter";
             peter.Age = 20;
         }
     }
