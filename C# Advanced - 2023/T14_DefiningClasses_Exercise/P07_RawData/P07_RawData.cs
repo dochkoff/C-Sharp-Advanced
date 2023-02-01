@@ -1,5 +1,4 @@
-﻿
-using P07_RawData;
+﻿using P07_RawData;
 
 List<Car> cars = new();
 
