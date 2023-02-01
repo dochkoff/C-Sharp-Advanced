@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_DateModifier", "P05_Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_RawData", "P07_RawData\P07_RawData.csproj", "{9E14E0EA-38E7-41E9-801D-B839DA79C004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniParking", "P10_SoftUniParking\SoftUniParking.csproj", "{C8A77323-A907-4C56-B197-1F0FE3EC6C79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_SoftUniParking", "P10_SoftUniParking\P10_SoftUniParking.csproj", "{C8A77323-A907-4C56-B197-1F0FE3EC6C79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
