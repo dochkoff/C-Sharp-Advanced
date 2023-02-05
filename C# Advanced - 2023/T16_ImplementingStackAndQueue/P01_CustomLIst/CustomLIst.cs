@@ -6,7 +6,6 @@ namespace P01_CustomLIst
     public class CustomLIst
     {
         private const int IniitialCapacity = 2;
-        private int initailIntValue = 0;
 
         private int[] items;
 
