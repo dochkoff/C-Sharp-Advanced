@@ -31,7 +31,7 @@ namespace IteratorsAndComparators
             public LibraryInterator(List<Book> books)
             {
                 this.books = books;
-                books.Sort();
+                books.Sort(new BookComparator());
                 this.Reset();
             }
 
