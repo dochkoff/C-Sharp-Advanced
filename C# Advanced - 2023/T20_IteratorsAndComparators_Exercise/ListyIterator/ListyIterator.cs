@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
+
 namespace ListyIterator
 {
-    public class ListyIterator<T>
+    public class ListyIterator<T> : IEnumerable<T>
     {
         private int index = 0;
         private List<T> items;
@@ -37,6 +39,21 @@ namespace ListyIterator
 
             Console.WriteLine(items[index]);
         }
+
+        public void PrintAll()
+        {
+            Console.WriteLine(string.Join(" ", items));
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                yield return items[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
 

@@ -24,6 +24,10 @@ while ((command = Console.ReadLine()) != "END")
     {
         collection.Print();
     }
+    else if (command == "PrintAll")
+    {
+        collection.PrintAll();
+    }
     else
     {
         Console.WriteLine("Invalid Operation!");
