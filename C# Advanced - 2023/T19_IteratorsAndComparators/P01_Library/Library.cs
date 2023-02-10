@@ -28,9 +28,10 @@ namespace IteratorsAndComparators
             private readonly List<Book> books;
             private int currentIndex;
 
-            public LibraryInterator(IEnumerable<Book> books)
+            public LibraryInterator(List<Book> books)
             {
-                this.books = books.ToList();
+                this.books = books;
+                books.Sort();
                 this.Reset();
             }
 
