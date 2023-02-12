@@ -1,128 +1,152 @@
-﻿using System;
-namespace CustomDoublyLinkedList
+﻿using System.Collections;
+
+namespace CustomDoublyLinkedList;
+
+public class DoublyLinkedList<T> : IEnumerable<T>
 {
-    public class DoublyLinkedList<T>
+    private class ListNode
     {
-        private class ListNode
+        public ListNode(T value)
         {
-            public ListNode(T value)
-            {
-                this.Value = value;
-            }
-
-            public T Value { get; set; }
-            public ListNode NextNode { get; set; }
-            public ListNode PreviousNode { get; set; }
-        }
-        private ListNode head;
-        private ListNode tail;
-
-
-        public int Count { get; private set; }
-
-        public void AddFirst(T element)
-        {
-            if (this.Count == 0)
-            {
-                this.head = this.tail = new ListNode(element);
-            }
-            else
-            {
-                ListNode newHead = new(element);
-                newHead.NextNode = this.head;
-                this.head.PreviousNode = newHead;
-                this.head = newHead;
-            }
-            this.Count++;
+            this.Value = value;
         }
 
-        public void AddLast(T element)
+        public ListNode NextNode { get; set; }
+
+        public ListNode PreviousNode { get; set; }
+
+        public T Value { get; set; }
+    }
+
+    private ListNode head;
+    private ListNode tail;
+
+    public int Count { get; private set; }
+
+    public void AddFirst(T element)
+    {
+        var newHead = new ListNode(element);
+
+        if (this.Count == 0)
         {
-            if (this.Count == 0)
-            {
-                this.head = this.tail = new ListNode(element);
-            }
-            else
-            {
-                ListNode newTail = new(element);
-                newTail.PreviousNode = this.tail;
-                this.tail.NextNode = newTail;
-                this.tail = newTail;
-            }
-            this.Count++;
+            this.head = this.tail = newHead;
+        }
+        else
+        {
+            newHead.NextNode = this.head;
+            this.head.PreviousNode = newHead;
+            this.head = newHead;
         }
 
-        public T RemoveFirst()
+        this.Count++;
+    }
+
+    public void AddLast(T element)
+    {
+        ListNode newTail = new ListNode(element);
+
+        if (this.Count == 0)
         {
-            if (Count == 0)
-            {
-                throw new InvalidProgramException("The list is empty");
-            }
-
-            T firstElement = this.head.Value;
-            this.head = this.head.NextNode;
-
-            if (this.head != null)
-            {
-                this.head.PreviousNode = null;
-            }
-            else
-            {
-                this.tail = null;
-            }
-
-            this.Count--;
-            return firstElement;
+            this.tail = this.head = newTail;
+        }
+        else
+        {
+            newTail.PreviousNode = this.tail;
+            this.tail.NextNode = newTail;
+            this.tail = newTail;
         }
 
-        public T RemoveLast()
+        this.Count++;
+    }
+
+    public T RemoveFirst()
+    {
+        if (this.Count == 0)
         {
-            if (Count == 0)
-            {
-                throw new InvalidProgramException("The list is empty");
-            }
-
-            T lastElement = this.tail.Value;
-            this.tail = this.tail.PreviousNode;
-
-            if (this.tail != null)
-            {
-                this.tail.NextNode = null;
-            }
-            else
-            {
-                this.head = null;
-            }
-
-            this.Count--;
-            return lastElement;
+            throw new InvalidOperationException("The list is empty");
         }
 
-        public void ForEach(Action<T> action)
-        {
-            ListNode currentNode = this.head;
+        T removedElement = this.head.Value;
 
-            while (currentNode != null)
-            {
-                action(currentNode.Value);
-                currentNode = currentNode.NextNode;
-            }
+        ListNode newHead = this.head.NextNode;
+
+        if (this.Count == 1)
+        {
+            this.head = this.tail = null;
+        }
+        else
+        {
+            newHead.PreviousNode = null;
+            this.head = newHead;
         }
 
-        public T[] ToArray()
-        {
-            T[] array = new T[this.Count];
-            int counter = 0;
-            ListNode currentNode = this.head;
+        this.Count--;
 
-            while (currentNode != null)
-            {
-                array[counter] = currentNode.Value;
-                currentNode = currentNode.NextNode;
-                counter++;
-            }
-            return array;
+        return removedElement;
+    }
+
+    public T RemoveLast()
+    {
+        if (this.Count == 0)
+        {
+            throw new InvalidOperationException("The list is empty");
+        }
+
+        T removedElement = this.tail.Value;
+
+        ListNode newTail = this.tail.PreviousNode;
+
+        if (this.Count == 1)
+        {
+            this.tail = this.head = null;
+        }
+        else
+        {
+            newTail.NextNode = null;
+            this.tail = newTail;
+        }
+
+        this.Count--;
+
+        return removedElement;
+    }
+
+    public void ForEach(Action<T> action)
+    {
+        ListNode currentNode = this.head;
+
+        while (currentNode != null)
+        {
+            action(currentNode.Value);
+            currentNode = currentNode.NextNode;
         }
     }
-}
 
+    public T[] ToArray()
+    {
+        T[] array = new T[this.Count];
+
+        var currentNode = this.head;
+
+        for (int i = 0; i < this.Count; i++)
+        {
+            array[i] = currentNode.Value;
+            currentNode = currentNode.NextNode;
+        }
+
+        return array;
+    }
+
+    public IEnumerator<T> GetEnumerator()
+    {
+        ListNode currentNode = this.head;
+
+        while (currentNode != null)
+        {
+            yield return currentNode.Value;
+            currentNode = currentNode.NextNode;
+        }
+    }
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+}

@@ -1,4 +1,6 @@
-﻿namespace CustomDoublyLinkedList
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace CustomDoublyLinkedList
 {
     public class StartUp
     {
@@ -15,12 +17,11 @@
 
             list.AddLast("z");
 
-            list.RemoveFirst();
+            Console.WriteLine(list.RemoveFirst());
 
-            list.RemoveLast();
+            Console.WriteLine(list.RemoveLast());
 
-            Action<string> action = new Action<string>(x => Console.WriteLine(x));
-            list.ForEach(action);
+            list.ForEach(x => Console.WriteLine($"Node: {x}"));
 
             string[] arr = list.ToArray();
             Console.WriteLine(string.Join(" ", arr));
