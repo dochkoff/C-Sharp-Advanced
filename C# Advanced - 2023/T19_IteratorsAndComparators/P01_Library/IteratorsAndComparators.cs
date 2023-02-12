@@ -1,6 +1,4 @@
-﻿using IteratorsAndComparators;
-
-namespace IteratorsAndComparators
+﻿namespace IteratorsAndComparators
 {
     public static class Starup
     {
@@ -11,12 +9,6 @@ namespace IteratorsAndComparators
             Book bookThree = new Book("The Documents in the Case", 1930);
 
             Library library = new Library(bookOne, bookTwo, bookThree);
-            BookComparator bookComparator = new();
-
-            foreach (var book in library)
-            {
-                Console.WriteLine(book);
-            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 namespace IteratorsAndComparators
 {
     public class Book : IComparable<Book>
@@ -30,4 +30,3 @@ namespace IteratorsAndComparators
         }
     }
 }
-

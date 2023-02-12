@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-
+﻿using System.Collections;
 namespace IteratorsAndComparators
 {
     public class Library : IEnumerable<Book>
@@ -15,7 +12,7 @@ namespace IteratorsAndComparators
 
         public IEnumerator<Book> GetEnumerator()
         {
-            return new LibraryInterator(this.books);
+            return new LibraryIterator(this.books);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -23,12 +20,12 @@ namespace IteratorsAndComparators
             return this.GetEnumerator();
         }
 
-        private class LibraryInterator : IEnumerator<Book>
+        private class LibraryIterator : IEnumerator<Book>
         {
             private readonly List<Book> books;
             private int currentIndex;
 
-            public LibraryInterator(List<Book> books)
+            public LibraryIterator(List<Book> books)
             {
                 this.books = books;
                 books.Sort(new BookComparator());
@@ -36,24 +33,12 @@ namespace IteratorsAndComparators
             }
 
             public Book Current => this.books[this.currentIndex];
-
             object IEnumerator.Current => this.Current;
 
-            public void Dispose()
-            {
-            }
+            public void Dispose() { }
+            public bool MoveNext() => ++this.currentIndex < this.books.Count;
+            public void Reset() => this.currentIndex = -1;
 
-            public bool MoveNext()
-            {
-                return ++this.currentIndex < this.books.Count;
-            }
-
-            public void Reset()
-            {
-                this.currentIndex = -1;
-            }
         }
     }
 }
-
-
