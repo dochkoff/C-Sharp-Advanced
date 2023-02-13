@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace ListyIterator
 {
@@ -12,7 +11,6 @@ namespace ListyIterator
         {
             this.items = items;
         }
-
 
         public bool Move()
         {
@@ -38,11 +36,6 @@ namespace ListyIterator
             }
 
             Console.WriteLine(items[index]);
-        }
-
-        public void PrintAll()
-        {
-            Console.WriteLine(string.Join(" ", items));
         }
 
         public IEnumerator<T> GetEnumerator()

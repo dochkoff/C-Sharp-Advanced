@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using ListyIterator;
+﻿using ListyIterator;
 
 List<string> items = Console.ReadLine()
     .Split(" ", StringSplitOptions.RemoveEmptyEntries)
@@ -23,10 +22,6 @@ while ((command = Console.ReadLine()) != "END")
     else if (command == "Print")
     {
         collection.Print();
-    }
-    else if (command == "PrintAll")
-    {
-        collection.PrintAll();
     }
     else
     {
