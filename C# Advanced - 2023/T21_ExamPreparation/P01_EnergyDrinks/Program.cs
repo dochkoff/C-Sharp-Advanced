@@ -1,49 +1,60 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿int[] caffeine = Console.ReadLine()
+    .Split(", ", StringSplitOptions.RemoveEmptyEntries)
+    .Select(int.Parse)
+    .ToArray();
 
-public class Program
+int[] drinks = Console.ReadLine()
+    .Split(", ", StringSplitOptions.RemoveEmptyEntries)
+    .Select(int.Parse)
+    .ToArray();
+
+Stack<int> caffeineStack = new();
+Queue<int> drinksQueue = new();
+int totalCaffeineIntake = 0;
+
+for (int i = 0; i < caffeine.Length; i++)
 {
-    public static void Main()
-    {
-        int[] caffeine = Array.ConvertAll(Console.ReadLine().Split(", "), int.Parse);
-        int[] drinks = Array.ConvertAll(Console.ReadLine().Split(", "), int.Parse);
-        CalculateCaffeine(caffeine, drinks);
-    }
+    caffeineStack.Push(caffeine[i]);
+}
 
-    public static void CalculateCaffeine(int[] caffeine, int[] drinks)
+for (int i = 0; i < drinks.Length; i++)
+{
+    drinksQueue.Enqueue(drinks[i]);
+}
+
+while (caffeineStack.Count > 0 && drinksQueue.Count > 0)
+{
+    int currentCaffeine = caffeineStack.Peek();
+    int currentDrink = drinksQueue.Peek();
+    int currentCaffeineIntake = currentCaffeine * currentDrink;
+
+    if (currentCaffeineIntake + totalCaffeineIntake <= 300)
     {
-        int totalCaffeine = 0;
-        while (caffeine.Length > 0 && drinks.Length > 0)
+        totalCaffeineIntake += currentCaffeineIntake;
+        caffeineStack.Pop();
+        drinksQueue.Dequeue();
+    }
+    else
+    {
+        caffeineStack.Pop();
+        int drinkToMove = drinksQueue.Dequeue();
+        drinksQueue.Enqueue(drinkToMove);
+        totalCaffeineIntake -= 30;
+
+        if (totalCaffeineIntake < 0)
         {
-            int currentCaffeine = caffeine[0];
-            int currentDrink = drinks[0];
-            if (currentCaffeine * currentDrink + totalCaffeine <= 300)
-            {
-                totalCaffeine += currentCaffeine * currentDrink;
-                caffeine = caffeine.Skip(1).ToArray();
-                drinks = drinks.Skip(1).ToArray();
-            }
-            else
-            {
-                caffeine[0] -= 30;
-                if (caffeine[0] < 0)
-                {
-                    caffeine[0] = 0;
-                }
-                int lastDrink = drinks[0];
-                drinks = drinks.Skip(1).Concat(new int[] { lastDrink }).ToArray();
-            }
+            totalCaffeineIntake = 0;
         }
-        if (drinks.Length > 0)
-        {
-            string remainingDrinks = string.Join(", ", drinks);
-            Console.WriteLine($"Drinks left: {remainingDrinks}");
-        }
-        else
-        {
-            Console.WriteLine("At least Stamat wasn't exceeding the maximum caffeine.");
-        }
-        Console.WriteLine($"Stamat is going to sleep with {totalCaffeine} mg caffeine.");
     }
 }
+
+if (drinksQueue.Count > 0)
+{
+    Console.WriteLine($"Drinks left: {string.Join(", ", drinksQueue)}");
+}
+else
+{
+    Console.WriteLine("At least Stamat wasn't exceeding the maximum caffeine.");
+}
+
+Console.WriteLine($"Stamat is going to sleep with {totalCaffeineIntake} mg caffeine.");
