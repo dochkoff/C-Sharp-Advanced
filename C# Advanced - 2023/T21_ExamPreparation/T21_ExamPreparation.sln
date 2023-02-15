@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1704.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_EnergyDrinks", "P01_EnergyDrinks\P01_EnergyDrinks.csproj", "{110EF70F-FBA8-47A7-A054-F91C89BE6158}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_RallyRacing", "P02_RallyRacing\P02_RallyRacing.csproj", "{31B05765-A11E-4510-BAA5-D85D05568341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{110EF70F-FBA8-47A7-A054-F91C89BE6158}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{110EF70F-FBA8-47A7-A054-F91C89BE6158}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{110EF70F-FBA8-47A7-A054-F91C89BE6158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B05765-A11E-4510-BAA5-D85D05568341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B05765-A11E-4510-BAA5-D85D05568341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B05765-A11E-4510-BAA5-D85D05568341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B05765-A11E-4510-BAA5-D85D05568341}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
