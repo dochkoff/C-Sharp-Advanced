@@ -18,4 +18,4 @@ The [C# Advanced](https://softuni.bg/trainings/3957/csharp-advanced-january-2023
 
 ## Course certificate
 
-Loading...
+![C# Advanced - January 2023 - Certificate](https://user-images.githubusercontent.com/74410756/220337472-f0747e6f-c269-46dc-8aa2-24f1cd012bae.jpeg)
