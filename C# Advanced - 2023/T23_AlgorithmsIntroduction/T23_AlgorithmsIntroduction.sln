@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_RecursiveArraySum", "P0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_RecursiveFactorial", "P02_RecursiveFactorial\P02_RecursiveFactorial.csproj", "{26110DC4-13D8-4F86-978F-976DC690C2BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfCoins", "P03_SumOfCoins\SumOfCoins.csproj", "{72C0D590-4B6A-4197-944A-0F13AAD88F0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_SumOfCoins", "P03_SumOfCoins\P03_SumOfCoins.csproj", "{72C0D590-4B6A-4197-944A-0F13AAD88F0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
