@@ -2,14 +2,13 @@
 {
     class Program
     {
-        private static int[] supp;
         static void Main(string[] args)
         {
             int[] nums = Console.ReadLine()
                 .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
-            supp = new int[nums.Length];
+            int[] supp = new int[nums.Length];
             MergeSort(nums, 0, nums.Length - 1);
 
             Console.WriteLine(string.Join(" ", nums));

@@ -6,6 +6,5 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <AssemblyName>P04_SetCover</AssemblyName>
   </PropertyGroup>
 </Project>
